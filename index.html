@@ -1,0 +1,27 @@
+<html>
+	<head>
+	</head>
+	
+	<body>
+		<div>
+			<h1 id="counter">1</h1>
+			<button id="plusOne" onclick="actions.plusOne()">Increment</button><button id="reset" onclick="actions.reset()">Reset</button><button id="minusOne" onclick="actions.minusOne()">Decrement</button>
+		</div>
+		
+		<script>
+			var actions = {
+				
+				num: 1,
+				
+				updateNum: (n)=> { this.n = n; document.getElementById('counter').innerText = this.n;},
+				
+				plusOne() { console.log(this.num); this.num++; console.log(this.num); this.updateNum(this.num); return },
+				
+				minusOne() { console.log(this.num); this.num--; console.log(this.num); this.updateNum(this.num); return },
+				
+				reset() { this.num = 1; this.updateNum(this.num); return }
+			}
+		</script>
+		
+	</body>
+</html>
